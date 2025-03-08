@@ -10,11 +10,8 @@ import Sliders from './Slides'
 
 export default function Home() {
   const t = useTranslations()
-
   return (
     <div className="flex flex-col gap-20">
-      {/* <h1 className="text-asia-2">{t('banner_title')}</h1> */}
-      {/* <LocaleSwitcher /> */}
       <div className="max-h-[1080px] max-xs:h-[812px] max-md:h-[834px] relative -mt-[72px]">
         <Image
           className="w-full h-full object-cover"
@@ -116,9 +113,9 @@ export default function Home() {
           <div className="max-xs:block flex items-center font-semibold text-[52px] max-xs:text-2xl text-center text-asia-2 uppercase">
             {t('bloc_3.title')}
           </div>
-          <p className="text-asia-9 text-medium text-xl flex justify-center items-center border-b border-asia-6 cursor-pointer">
+          <p className="text-asia-9 text-medium text-xl flex justify-center items-center border-b border-asia-6 cursor-pointer hover:text-asia-2 hover:border-asia-2 group">
             {t('bloc_3.more_info')}{' '}
-            <span className="[&_svg>path]:fill-asia-9 [&_svg]:rotate-[45deg] h-fit">
+            <span className="[&_svg>path]:fill-asia-9 [&_svg]:rotate-[45deg] h-fit group-hover:[&_svg>path]:fill-asia-2">
               <Svg.ArrowUpRight />
             </span>
           </p>

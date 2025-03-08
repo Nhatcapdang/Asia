@@ -28,7 +28,7 @@ const Slides = () => {
       <Container className="mt-[60px]">
         <div className="grid grid-cols-2 mb-[32px]">
           <p className="text-asia-1/80 text-lg ">{t('bloc_5.text')} </p>
-          <h1 className="text-asia-1 font-semibold text-[40px] uppercase">
+          <h1 className="text-asia-1 font-semibold text-[40px] uppercase ">
             {t('bloc_5.title')} <span className="text-asia-2">#BASIC</span>
           </h1>
         </div>

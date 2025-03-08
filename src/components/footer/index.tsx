@@ -79,9 +79,12 @@ export default function Footer() {
               © BASIC 2025
             </p>
             <div className="flex gap-3 max-xs:mb-5 ">
-              {[<Svg.Fb />, <Svg.Fb2 />, <Svg.Fb3 />].map(i => {
+              {[<Svg.Fb />, <Svg.Fb2 />, <Svg.Fb3 />].map((i, idx) => {
                 return (
-                  <span className="cursor-pointer [&_svg>rect]:hover:fill-asia-3">
+                  <span
+                    key={idx}
+                    className="cursor-pointer [&_svg>rect]:hover:fill-asia-3"
+                  >
                     {i}
                   </span>
                 )

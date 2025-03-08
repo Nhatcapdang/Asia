@@ -1,10 +1,10 @@
 /** @format */
 
-import { useState } from 'react';
-import { AnimatePresence, Variants, motion } from 'framer-motion';
+import { useState } from 'react'
+import { AnimatePresence, Variants, motion } from 'framer-motion'
 
-import styles from './App.module.css';
-import { TABS } from '@/contants';
+import styles from './App.module.css'
+import { TABS } from '@/contants'
 
 const tabContentVariants: Variants = {
   initial: {
@@ -19,25 +19,25 @@ const tabContentVariants: Variants = {
     y: -10,
     opacity: 0,
   },
-};
+}
 
 function Tabs() {
-  const [activeTab, setActiveTab] = useState<any>(TABS[0]);
+  const [activeTab, setActiveTab] = useState<any>(TABS[0])
 
   const handleClick = (e: any, tab: any) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    setActiveTab(tab);
-  };
+    setActiveTab(tab)
+  }
 
-  const isSelected = (tab: any) => activeTab.name === tab.name;
+  const isSelected = (tab: any) => activeTab.name === tab.name
 
   return (
     <div className="overflow-hidden flex flex-col">
       <div className="flex gap-[17px] overflow-auto">
-        {TABS.map((tab) => (
+        {TABS.map((tab, idx) => (
           <div
-            key={tab.name}
+            key={idx}
             className={
               [styles.tabItem, isSelected(tab) ? styles.selected : ''].join(
                 ' '
@@ -82,7 +82,7 @@ function Tabs() {
         </AnimatePresence>
       </div>
     </div>
-  );
+  )
 }
 
-export default Tabs;
+export default Tabs
