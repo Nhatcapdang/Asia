@@ -38,15 +38,15 @@ export default function Home() {
         </div>
       </div>
       <Container>
-        <div className="max-xs:block flex items-center font-semibold text-[52px] max-xs:text-2xl text-center text-asia-2 uppercase">
-          <span className="flex-1 border-t mx-10 border-asia-7 max-xs:hidden"></span>
+        <div className="max-md:block flex items-center font-semibold text-[52px] max-md:text-2xl text-center text-asia-2 uppercase">
+          <span className="flex-1 border-t mx-10 border-asia-7 max-md:hidden"></span>
           {t('bloc_1.title')}
-          <span className="flex-1 border-t mx-10 border-asia-7 max-xs:hidden"></span>
+          <span className="flex-1 border-t mx-10 border-asia-7 max-md:hidden"></span>
         </div>
-        <p className="text-asia-1 text-2xl text-center mb-10 max-xs:text-sm max-xs:mb-5">
+        <p className="text-asia-1 text-2xl text-center mb-10 max-md:text-sm max-md:mb-5">
           {t('bloc_1.subtitle')}
         </p>
-        <div className="grid grid-cols-3 gap-6 max-xs:grid-cols-1 ">
+        <div className="grid grid-cols-3 gap-6 max-md:grid-cols-1 ">
           {[
             {
               avatar: Img.Avatar4,
@@ -62,7 +62,7 @@ export default function Home() {
               <div
                 key={idx}
                 className={clsx('group/item', {
-                  'mt-10 max-xs:mt-0': idx % 2 === 0,
+                  'mt-10 max-md:mt-0': idx % 2 === 0,
                 })}
                 data-aos="fade-right"
                 data-aos-offset={50 * idx}
@@ -76,27 +76,27 @@ export default function Home() {
                     style={{
                       objectFit: 'cover',
                     }}
-                    className="w-full h-full max-xs:max-h-[200px]"
+                    className="w-full h-full max-sm:max-h-[200px]"
                     loading="lazy"
                     placeholder="blur"
                     quality={60}
                   />
                 </WobbleCard>
-                <div className=" flex flex-col gap-4 max-xs:gap-2">
+                <div className=" flex flex-col gap-4 max-md:gap-2">
                   <div></div>
-                  <div className="max-xs:block hidden"></div>
+                  <div className="max-md:block hidden"></div>
                   <div>
-                    <h1 className="text-asia-2  text-[20px] max-xs:text-xs font-medium">
+                    <h1 className="text-asia-2  text-[20px] max-md:text-xs font-medium">
                       {t.raw('bloc_1.cases')[idx].category}
                     </h1>
-                    <h1 className="font-medium text-[28px] max-xs:text-base text-asia-1">
+                    <h1 className="font-medium text-[28px] max-md:text-base text-asia-1">
                       {t.raw('bloc_1.cases')[idx].tagline}
                     </h1>
                   </div>
-                  <p className="line-clamp-2 text-asia-1  max-xs:text-sm text-opacity-80">
+                  <p className="line-clamp-2 text-asia-1  max-md:text-sm text-opacity-80">
                     {t.raw('bloc_1.cases')[idx].description}
                   </p>
-                  <button className="px-3 py-2 w-max text-asia-1 max-xs:text-sm text-lg flex justify-center items-center gap-2 rounded-[33px] h-11 max-xs:h-8 border-opacity-30 border-asia-1 border">
+                  <button className="px-3 py-2 w-max text-asia-1 max-md:text-sm text-lg flex justify-center items-center gap-2 rounded-[33px] h-11 max-xs:h-8 border-opacity-30 border-asia-1 border">
                     {t.raw('bloc_1.cases')[idx].cta}{' '}
                     <span className="[&_svg>path]:fill-asia-8">
                       <Svg.ArrowUpRight />
@@ -109,11 +109,11 @@ export default function Home() {
         </div>
       </Container>
       <Container className="w-full">
-        <div className="flex justify-between items-center ">
-          <div className="max-xs:block flex items-center font-semibold text-[52px] max-xs:text-2xl text-center text-asia-2 uppercase">
+        <div className="mb-[32px] max-xs:mb-[16px] flex justify-between items-center ">
+          <div className="max-xs:block flex items-center font-semibold text-[52px] max-xs:text-2xl  text-asia-2 uppercase">
             {t('bloc_3.title')}
           </div>
-          <p className="text-asia-9 text-medium text-xl flex justify-center items-center border-b border-asia-6 cursor-pointer hover:text-asia-2 hover:border-asia-2 group">
+          <p className="  flex max-sm:hidden text-asia-9 text-medium text-xl  justify-center items-center border-b border-asia-6 cursor-pointer hover:text-asia-2 hover:border-asia-2 group">
             {t('bloc_3.more_info')}{' '}
             <span className="[&_svg>path]:fill-asia-9 [&_svg]:rotate-[45deg] h-fit group-hover:[&_svg>path]:fill-asia-2">
               <Svg.ArrowUpRight />
@@ -140,6 +140,12 @@ export default function Home() {
             speed="normal"
           />
         </div>
+        <button className="hidden max-sm:flex mt-[15px] mx-auto rounded-[43px] bg-asia-2 px-10 py-3 w-max hover:bg-asia-3 cursor-pointer ">
+          {t('bloc_3.more_info')}{' '}
+          <span className="[&_svg>path]:fill-white [&_svg]:rotate-[45deg] h-fit group-hover:[&_svg>path]:fill-asia-2">
+            <Svg.ArrowUpRight />
+          </span>
+        </button>
       </Container>
       <Container>
         <Card img={Img.Banner7} description={t('bloc_4.text')} />

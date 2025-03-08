@@ -26,9 +26,11 @@ const Slides = () => {
   return (
     <div className="bg-gradient-to-b  from-asia-10/20 to-white">
       <Container className="mt-[60px]">
-        <div className="grid grid-cols-2 mb-[32px]">
-          <p className="text-asia-1/80 text-lg ">{t('bloc_5.text')} </p>
-          <h1 className="text-asia-1 font-semibold text-[40px] uppercase ">
+        <div className="grid grid-cols-2 max-xs:grid-cols-1 mb-[32px] gap-10 max-md:gap-5">
+          <p className="text-asia-1/80 text-lg max-md:text-sm">
+            {t('bloc_5.text')}{' '}
+          </p>
+          <h1 className="text-asia-1 font-semibold text-[40px] uppercase max-md:text-2xl">
             {t('bloc_5.title')} <span className="text-asia-2">#BASIC</span>
           </h1>
         </div>
@@ -39,7 +41,7 @@ const Slides = () => {
             backgroundPosition: 'center',
           }}
         >
-          <div className="px-[100px] py-[50px]   ">
+          <div className="   ">
             <div className="bg-white p-5 rounded-[20px]">
               <Image
                 src={Img.Lbs}
@@ -50,26 +52,26 @@ const Slides = () => {
                 quality={60}
               />
               <div className="flex justify-between items-center">
-                <p className="text-black font-semibold text-2xl">
+                <p className="text-black font-semibold text-2xl max-xs:text-base">
                   {' '}
                   {t.raw('bloc_5.reviews')[active].author}
                 </p>
-                <p className="text-black text-xl">
+                <p className="text-black text-xl max-xs:text-sm">
                   {' '}
                   {t.raw('bloc_5.reviews')[active].date}
                 </p>
               </div>
-              <p className="text-asia-9">
+              <p className="text-asia-9  max-xs:text-sm">
                 {t.raw('bloc_5.reviews')[active].review}
               </p>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-4 gap-6 max-sm:gap-4 mb-12 max-md:grid-cols-2">
           {SLIDES_DATA.map((i, idx) => {
             return (
               <div
-                className="relative cursor-pointer"
+                className="relative cursor-pointer rounded-[20px] overflow-hidden"
                 key={idx}
                 onMouseEnter={() => setActive(idx)}
               >
@@ -82,8 +84,8 @@ const Slides = () => {
                   placeholder="blur"
                   quality={60}
                 />
-                <div className="absolute left-0 bottom-0 justify-between px-5 py-4 w-full flex bg-asia-1/60 rounded-b-[20px] cursor-pointer">
-                  <p className="flex items-center gap-[6px]">
+                <div className="absolute left-0 bottom-0 justify-between px-5 py-4 max-xs:p-2 w-full flex bg-asia-1/60  cursor-pointer">
+                  <p className="flex items-center gap-[6px] max-xs:text-xs">
                     <Svg.Instagram />
                     {t.raw('bloc_5.reviews')[idx].author}
                   </p>
