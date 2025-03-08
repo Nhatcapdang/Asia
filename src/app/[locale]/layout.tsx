@@ -14,9 +14,9 @@ import { routing } from '@/i18n/routing'
 const poppins = Poppins({ weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'TSAP Private Wealth',
+  title: 'Source Of Asia',
   description:
-    'TSAP is a boutique financial advisory & services firm based in Sydney, Australia.',
+    'Source Of Asia is a group of companies that provide a wide range of services in the field of construction, design, and consulting.',
 }
 
 export default async function LocaleLayout({
