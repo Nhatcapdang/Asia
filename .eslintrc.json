@@ -1,0 +1,24 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "name": "next/link",
+        "message": "Please use `@navigation` instead.",
+        "importNames": ["default"],
+        "suggest": {
+          "fix": "import { Link } from '@/i18n/navigation"
+        }
+      },
+      {
+        "name": "next/navigation",
+        "message": "Please use `@navigation` instead.",
+        "importNames": ["redirect", "permanentRedirect", "useRouter"],
+        "suggest": {
+          "fix": "import { redirect, permanentRedirect, useRouter } from '@/i18n/navigation"
+        }
+      }
+    ]
+  }
+}
