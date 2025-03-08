@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 import { Nav } from './Nav/Index'
 import { motion } from 'framer-motion'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Svg from '../../public/svg'
 
@@ -34,6 +34,8 @@ export default function Header() {
   const isActive = useCallback((href: string) => pathname === href, [pathname])
   const locale = useLocale()
   console.log(locale)
+  const t = useTranslations()
+
   return (
     <header className=" bg-asia-1  bg-opacity-70 sticky w-full top-0 z-50 shadow-3xl">
       <Container>
@@ -59,7 +61,7 @@ export default function Header() {
                       )}
                       locale={locale}
                     >
-                      {item.title}
+                      {t.raw('head_menu')[idx]}
                       {isActive(item.href) && (
                         <motion.span
                           layoutId="pill-tab"

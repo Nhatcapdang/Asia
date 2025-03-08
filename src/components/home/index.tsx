@@ -96,9 +96,9 @@ export default function Home() {
                   <p className="line-clamp-2 text-asia-1  max-md:text-sm text-opacity-80">
                     {t.raw('bloc_1.cases')[idx].description}
                   </p>
-                  <button className="px-3 py-2 w-max text-asia-1 max-md:text-sm text-lg flex justify-center items-center gap-2 rounded-[33px] h-11 max-xs:h-8 border-opacity-30 border-asia-1 border">
+                  <button className="px-3 py-2 w-max text-asia-1 hover:bg-asia-2 hover:text-white group max-md:text-sm text-lg flex justify-center items-center gap-2 rounded-[33px] h-11 max-xs:h-8 border-opacity-30 border-asia-1 border">
                     {t.raw('bloc_1.cases')[idx].cta}{' '}
-                    <span className="[&_svg>path]:fill-asia-8">
+                    <span className="[&_svg>path]:fill-asia-8 group-hover:[&_svg>path]:fill-white">
                       <Svg.ArrowUpRight />
                     </span>
                   </button>
