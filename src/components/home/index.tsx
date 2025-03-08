@@ -39,9 +39,9 @@ export default function Home() {
       </div>
       <Container>
         <div className="max-md:block flex items-center font-semibold text-[52px] max-md:text-2xl text-center text-asia-2 uppercase">
-          <span className="flex-1 border-t mx-10 border-asia-7 max-md:hidden"></span>
+          <span className="flex-1 border-t mr-10 border-asia-7 max-md:hidden min-w-40"></span>
           {t('bloc_1.title')}
-          <span className="flex-1 border-t mx-10 border-asia-7 max-md:hidden"></span>
+          <span className="flex-1 border-t mr-10 border-asia-7 max-md:hidden min-w-40"></span>
         </div>
         <p className="text-asia-1 text-2xl text-center mb-10 max-md:text-sm max-md:mb-5">
           {t('bloc_1.subtitle')}
